@@ -3,72 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M&B Calidad y Gestión</title>
+  
+  <!-- Optimización para motores de búsqueda (SEO) -->
+  <title>M&B Calidad y Gestión | SG-SST, Auditorías y Capacitación</title>
+  <meta name="description" content="M&B Calidad y Gestión S.A.S. - Especialistas en Sistemas de Gestión de Seguridad y Salud en el Trabajo (SG-SST), PAMEC, auditorías de calidad y formación empresarial.">
+  <meta name="keywords" content="M&B Calidad y Gestión, SG-SST, Auditoría PAMEC, Seguridad y Salud en el Trabajo, Capacitación Empresarial, Colombia">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="M&B Calidad y Gestión S.A.S.">
+
+  <!-- Open Graph para compartir en WhatsApp y Redes Sociales -->
+  <meta property="og:title" content="M&B Calidad y Gestión S.A.S.">
+  <meta property="og:description" content="Soluciones integrales en SG-SST, Auditorías de Calidad y Formación Empresarial.">
+  <meta property="og:type" content="website">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .hero {
       background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
       color: white;
-      padding: 80px 0;
+      padding: 90px 0;
     }
     .card-feature {
       border: none;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       transition: transform 0.2s;
     }
     .card-feature:hover {
       transform: translateY(-5px);
+    }
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-whatsapp:hover {
+      background-color: #128c7e;
+      color: white;
     }
   </style>
 </head>
 <body>
 
   <!-- Encabezado / Navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">M&B CALIDAD Y GESTIÓN S.A.S.</a>
     </div>
   </nav>
 
-  <!-- Sección Hero -->
+  <!-- Sección Principal / Hero -->
   <header class="hero text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-3">M&B Calidad y Gestión</h1>
-      <p class="lead mb-4">Soluciones integrales en Sistemas de Gestión, Seguridad y Salud en el Trabajo (SG-SST), Auditorías y Capacitación Empresarial.</p>
-      <a href="#contacto" class="btn btn-primary btn-lg me-2">Contáctanos</a>
-      <a href="#servicios" class="btn btn-outline-light btn-lg">Servicios</a>
+      <h1 class="display-4 fw-bold mb-3">M&B Calidad y Gestión S.A.S.</h1>
+      <p class="lead mb-4 col-md-8 mx-auto">Soluciones integrales en Sistemas de Gestión de Seguridad y Salud en el Trabajo (SG-SST), Auditoría PAMEC y Capacitación Empresarial.</p>
+      <a href="https://wa.me/" target="_blank" class="btn btn-whatsapp btn-lg me-2">Contactar por WhatsApp</a>
+      <a href="#servicios" class="btn btn-outline-light btn-lg">Nuestros Servicios</a>
     </div>
   </header>
 
   <!-- Sección de Servicios -->
   <section id="servicios" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Nuestros Servicios</h2>
+      <h2 class="text-center mb-5 fw-bold text-primary">Servicios Especializados</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card card-feature h-100 p-4">
-            <h3 class="h5 fw-bold text-primary">Sistema SG-SST</h3>
-            <p>Implementación, auditoría y seguimiento continuo del Sistema de Gestión de la Seguridad y Salud en el Trabajo.</p>
+          <div class="card card-feature h-100 p-4 text-center">
+            <h3 class="h5 fw-bold mb-3">Sistema SG-SST</h3>
+            <p class="text-muted">Diseño, implementación, auditoría y seguimiento del Sistema de Gestión de Seguridad y Salud en el Trabajo para empresas de todos los sectores.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card card-feature h-100 p-4">
-            <h3 class="h5 fw-bold text-primary">Auditoría y PAMEC</h3>
-            <p>Acompañamiento en programas de auditoría para el mejoramiento continuo de la calidad en salud y empresas en general.</p>
+          <div class="card card-feature h-100 p-4 text-center">
+            <h3 class="h5 fw-bold mb-3">Auditoría y PAMEC</h3>
+            <p class="text-muted">Acompañamiento en el Programa de Auditoría para el Mejoramiento Continuo de la Calidad (PAMEC) y evaluaciones de control interno.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card card-feature h-100 p-4">
-            <h3 class="h5 fw-bold text-primary">Capacitación y Formación</h3>
-            <p>Cursos, talleres y diplomados especializados a través de nuestra plataforma de formación continua.</p>
+          <div class="card card-feature h-100 p-4 text-center">
+            <h3 class="h5 fw-bold mb-3">Capacitación y Formación</h3>
+            <p class="text-muted">Cursos, talleres y procesos de acreditación educativa continua para personal operativo, técnico y administrativo.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sección de Contacto / Pie de Página -->
-  <footer id="contacto" class="bg-dark text-white py-4 text-center">
+  <!-- Pie de Página -->
+  <footer class="bg-dark text-white py-4 text-center">
     <div class="container">
       <p class="mb-1"><strong>M&B CALIDAD Y GESTIÓN S.A.S.</strong></p>
       <p class="mb-0 text-muted">&copy; 2026 Todos los derechos reservados.</p>
