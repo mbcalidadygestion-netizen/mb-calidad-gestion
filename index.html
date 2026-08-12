@@ -1,101 +1,371 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Optimización para motores de búsqueda (SEO) -->
-  <title>M&B Calidad y Gestión S.A.S. | SG-SST, Auditorías y Capacitación</title>
-  <meta name="description" content="M&B Calidad y Gestión S.A.S. - Especialistas en Sistemas de Gestión de Seguridad y Salud en el Trabajo (SG-SST), PAMEC, auditorías de calidad y formación empresarial.">
-  <meta name="keywords" content="M&B Calidad y Gestión, SG-SST, Auditoría PAMEC, Seguridad y Salud en el Trabajo, Capacitación Empresarial, Colombia">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="M&B Calidad y Gestión S.A.S.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>M&B Calidad y Gestión S.A.S. | Asesoría en Salud y SG-SST</title>
+    <meta name="description" content="Empresa colombiana especializada en asesorías, auditorías y consultorías en calidad en salud, seguridad y salud en el trabajo (SG-SST) y gestión ambiental.">
+    <meta name="keywords" content="SG-SST, Calidad en Salud, PAMEC, Habilitación IPS, Habilitación Profesionales Independientes, Gestión Ambiental, Valledupar, Colombia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mbcalidadygestion-netizen.github.io/mb-calidad-gestion/">
 
-  <!-- Open Graph para compartir en WhatsApp y Redes Sociales -->
-  <meta property="og:title" content="M&B Calidad y Gestión S.A.S.">
-  <meta property="og:description" content="Soluciones integrales en SG-SST, Auditorías de Calidad y Formación Empresarial.">
-  <meta property="og:type" content="website">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome para Iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-      color: white;
-      padding: 90px 0;
-    }
-    .card-feature {
-      border: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s;
-    }
-    .card-feature:hover {
-      transform: translateY(-5px);
-    }
-    .btn-whatsapp {
-      background-color: #25d366;
-      color: white;
-      font-weight: bold;
-    }
-    .btn-whatsapp:hover {
-      background-color: #128c7e;
-      color: white;
-    }
-  </style>
+    <!-- Estilos Personalizados -->
+    <style>
+        :root {
+            --color-oscuro: #2a2a4e; /* Azul oscuro de las imágenes */
+            --color-cian: #10c4cc;   /* Turquesa de las imágenes */
+            --color-blanco: #ffffff;
+            --color-gris-claro: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--color-oscuro);
+        }
+
+        /* Navegación */
+        .navbar {
+            background-color: var(--color-oscuro);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-brand img {
+            max-height: 50px; /* Ajusta según tu logo */
+        }
+        .navbar-nav .nav-link {
+            color: var(--color-blanco) !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--color-cian) !important;
+        }
+
+        /* Sección Hero (Inicio) */
+        .hero {
+            background: linear-gradient(135deg, var(--color-oscuro) 0%, #3e3e70 100%);
+            color: var(--color-blanco);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .btn-hero {
+            background-color: var(--color-cian);
+            color: var(--color- oscu ro);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn-hero:hover {
+            background-color: var(--color-blanco);
+            color: var(--color-oscuro);
+            transform: translateY(-3px);
+        }
+
+        /* Títulos de Sección */
+        .section-title {
+            color: var(--color-oscuro);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-cian);
+            border-radius: 2px;
+        }
+
+        /* Quiénes Somos */
+        .whoweare {
+            padding: 80px 0;
+            background-color: var(--color- gris- cl aro);
+        }
+        .whoweare-img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Servicios */
+        .services {
+            padding: 80px 0;
+        }
+        .service-card {
+            background-color: var(--color-blanco);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--color-cian);
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: var(--color-cian);
+            margin-bottom: 25px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--color-oscuro);
+        }
+        .service-card p {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Contacto */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--color-gris-claro);
+        }
+        .contact-info i {
+            color: var(--color-cian);
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        /* Footer (Pie de página) */
+        footer {
+            background-color: var(--color-oscuro);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+        footer strong {
+            color: var(--color-blanco);
+        }
+
+        /* Botón WhatsApp Flotante */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: var(--color-blanco);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            color: var(--color-blanco);
+            transform: scale(1.1);
+        }
+        
+        /* Ajustes para Responsividad */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .navbar-brand img {
+                max-height: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Encabezado / Navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">M&B CALIDAD Y GESTIÓN S.A.S.</a>
-    </div>
-  </nav>
-
-  <!-- Sección Principal / Hero -->
-  <header class="hero text-center">
-    <div class="container">
-      <h1 class="display-4 fw-bold mb-3">M&B Calidad y Gestión S.A.S.</h1>
-      <p class="lead mb-4 col-md-8 mx-auto">Soluciones integrales en Sistemas de Gestión de Seguridad y Salud en el Trabajo (SG-SST), Auditoría PAMEC y Capacitación Empresarial.</p>
-      <a href="https://wa.me/" target="_blank" class="btn btn-whatsapp btn-lg me-2">Contactar por WhatsApp</a>
-      <a href="#servicios" class="btn btn-outline-light btn-lg">Nuestros Servicios</a>
-    </div>
-  </header>
-
-  <!-- Sección de Servicios -->
-  <section id="servicios" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5 fw-bold text-primary">Servicios Especializados</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card card-feature h-100 p-4 text-center">
-            <h3 class="h5 fw-bold mb-3">Sistema SG-SST</h3>
-            <p class="text-muted">Diseño, implementación, auditoría y seguimiento del Sistema de Gestión de Seguridad y Salud en el Trabajo para empresas de todos los sectores.</p>
-          </div>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- Asegúrate de subir tu logo con el nombre logo.png -->
+                <img src="logo.png" alt="M&B Calidad y Gestión Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-link"></li><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a></li>
+                    <li class="nav-link"></li><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-link"></li><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-link"></li><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-4">
-          <div class="card card-feature h-100 p-4 text-center">
-            <h3 class="h5 fw-bold mb-3">Auditoría y PAMEC</h3>
-            <p class="text-muted">Acompañamiento en el Programa de Auditoría para el Mejoramiento Continuo de la Calidad (PAMEC) y evaluaciones de control interno.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-feature h-100 p-4 text-center">
-            <h3 class="h5 fw-bold mb-3">Capacitación y Formación</h3>
-            <p class="text-muted">Cursos, talleres y procesos de acreditación educativa continua para personal operativo, técnico y administrativo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Pie de Página -->
-  <footer class="bg-dark text-white py-4 text-center">
-    <div class="container">
-      <p class="mb-1"><strong>M&B CALIDAD Y GESTIÓN S.A.S.</strong></p>
-      <p class="mb-0 text-muted">&copy; 2026 Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Sección Hero (Inicio) -->
+    <header id="inicio" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1>M&B Calidad y Gestión S.A.S.</h1>
+                    <p>Soluciones integrales en asesorías, auditorías y consultorías en el área de la calidad en salud, seguridad y salud en el trabajo y gestión ambiental en Colombia.</p>
+                    <a href="#servicios" class="btn btn-hero btn-lg">Conoce Nuestros Servicios</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!-- Sección Quiénes Somos -->
+    <section id="nosotros" class="whoweare">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="quienes-somos.jpg" alt="M&B Calidad y Gestión - Quiénes Somos" class="whoweare-img"> <!-- Puedes subir una imagen con este nombre o usar la de image_16.png si consigues el original -->
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title text-start mb-4">¿Quiénes Somos?</h2>
+                    <p class="lead text-muted">Somos una empresa colombiana dedicada a prestar los servicios profesionales en asesorías, auditorías y consultorías con un grupo interdisciplinario especializado.</p>
+                    <p>Nuestro compromiso es ofrecer los mejores estándares de calidad y servicio a nuestros clientes, garantizando el cumplimiento normativo y la mejora continua en sus procesos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title text-center">Nuestros Servicios Especializados</h2>
+            <div class="row g-4">
+                
+                <!-- Servicio 1: SG-SST (Basado en el contexto y image_16.png) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-hard-hat service-icon"></i>
+                        <h3>SG-SST</h3>
+                        <p>Diseño, implementación y auditoría del Sistema de Gestión de Seguridad y Salud en el Trabajo.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Habilitación IPS (Basado en image_14.png) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-hospital service-icon"></i>
+                        <h3>Habilitación de IPS</h3>
+                        <p>Asesoría para la habilitación de IPS de baja, mediana y alta complejidad ante secretaría de salud departamental y ministerio de salud.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Habilitación Prof. Indep. (Basado en image_13.png) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-user-md service-icon"></i>
+                        <h3>Habilitación de Profesionales Independientes</h3>
+                        <p>Habilitación como profesional independiente en salud para cumplimiento de condiciones mínimas con la finalidad de garantizar la calidad en la atención.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: PAMEC (Basado en image_14.png y image_15.png) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-chart-line service-icon"></i>
+                        <h3>Programa PAMEC</h3>
+                        <p>Asesoría en el Programa de Auditoría para el Mejoramiento de la Calidad (PAMEC) para mantener y mejorar los resultados de los procesos intervenidos.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Acreditación Salud (Basado en image_15.png) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-award service-icon"></i>
+                        <h3>Acreditación en Salud</h3>
+                        <p>Preparación y acompañamiento para la acreditación en salud ICONTEC.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Gestión Ambiental (Basado en image_16.png) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-leaf service-icon"></i>
+                        <h3>Gestión Ambiental</h3>
+                        <p>Asesoría y consultoría en gestión ambiental empresarial.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Contáctanos</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto text-center contact-info">
+                    <p class="lead text-muted mb-4">Estamos listos para ayudarte a mejorar la calidad y gestión de tu organización.</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:tu-correo@mbcalidadygestion.com">tu-correo@mbcalidadygestion.com</a></p> <!-- Reemplaza con tu correo -->
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+573000000000">+57 300 000 0000</a></p> <!-- Reemplaza con tu teléfono -->
+                    <p><i class="fas fa-map-marker-alt"></i> Valledupar, Cesar - Colombia</p>
+                    <p class="mt-4">
+                        <a href="#" class="btn btn-hero btn-lg">Solicitar una Cotización</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 <strong>M&B Calidad y Gestión S.A.S.</strong> Todos los derechos reservados.</p>
+            <p>Diseño web profesional</p>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp Flotante -->
+    <!-- Reemplaza el número 573000000000 con tu número real de WhatsApp -->
+    <a href="https://wa.me/573154843628?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20M&B%20Calidad%20y%20Gestión." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script para scroll suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
