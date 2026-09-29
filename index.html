@@ -204,20 +204,50 @@
             .hero h1 { font-size: 2.2rem; }
             .navbar-brand img { max-height: 40px; }
         }
-        /* Carrusel Continuo de Experiencia / Aliados */
+    /* Sección de Experiencia y Marcas */
 .experience-section {
-    padding: 60px 0;
+    padding: 70px 0;
     background-color: var(--color-blanco);
     overflow: hidden;
 }
 
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: var(--color-gris-claro);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-cian);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+    font-weight: 600;
+}
+
+/* Carrusel Infinito Desplazable */
 .marquee-container {
     display: flex;
     overflow: hidden;
     user-select: none;
-    gap: 2rem;
+    gap: 1.5rem;
     position: relative;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .marquee-container::before,
@@ -225,7 +255,7 @@
     content: "";
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 80px;
     height: 100%;
     z-index: 2;
     pointer-events: none;
@@ -246,37 +276,39 @@
     display: flex;
     justify-content: space-around;
     min-width: 100%;
-    gap: 2rem;
-    animation: scroll-left 25s linear infinite;
+    gap: 1.5rem;
+    animation: scroll-left 22s linear infinite;
 }
 
 .marquee-container:hover .marquee-content {
-    animation-play-state: paused; /* Se pausa cuando pasas el mouse por encima */
+    animation-play-state: paused; /* Se pausa al pasar el cursor para leer bien */
 }
 
 .client-badge {
     background: var(--color-gris-claro);
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 15px 25px;
+    border-radius: 50px;
+    padding: 12px 24px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     font-weight: 600;
+    font-size: 0.95rem;
     color: var(--color-oscuro);
     white-space: nowrap;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
 }
 
 .client-badge i {
     color: var(--color-cian);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .client-badge:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     border-color: var(--color-cian);
+    background-color: #ffffff;
 }
 
 @keyframes scroll-left {
@@ -566,39 +598,62 @@
             </div>
         </div>
     </div>
-     <!-- Sección Experiencia y Trayectoria -->
-<section class="experience-section">
-    <div class="container text-center mb-4">
-        <h2 class="section-title text-center">Nuestra Experiencia</h2>
-        <p class="lead text-muted">Empresas, IPS y profesionales independientes que confían en nuestra gestión normativo-sanitaria y contable.</p>
+    <!-- Sección Experiencia y Clientes Activos -->
+<section id="experiencia" class="experience-section">
+    <div class="container">
+        <h2 class="section-title text-center">Nuestra Experiencia y Respaldos</h2>
+        <p class="text-center text-muted mb-5">Acompañamos a instituciones de salud, consultorios especializados y empresas en el cumplimiento normativo y la mejora de sus procesos.</p>
+
+        <!-- Tarjetas de Impacto / Cifras -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">+100%</div>
+                <div class="stat-label">Cumplimiento Normativo</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Res. 3100</div>
+                <div class="stat-label">Habilitación de Servicios</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Res. 2275</div>
+                <div class="stat-label">Validación RIPS JSON</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">SG-SST</div>
+                <div class="stat-label">Estándares Mínimos</div>
+            </div>
+        </div>
+
+        <h4 class="text-center mb-4 text-secondary" style="font-size: 1.1rem; font-weight: 600;">ALIANZAS Y CLIENTES ATENDIDOS</h4>
     </div>
 
-    <!-- Carrusel Infinito Desplazable -->
+    <!-- Carrusel Infinito de Clientes / Nombres de Empresas -->
     <div class="marquee-container">
         
-        <!-- Primer Grupo -->
+        <!-- Grupo 1 -->
         <div class="marquee-content">
-            <div class="client-badge"><i class="fas fa-clinic-medical"></i> Consultorios de Cardiología</div>
-            <div class="client-badge"><i class="fas fa-hospital-user"></i> IPS Especializadas</div>
-            <div class="client-badge"><i class="fas fa-user-md"></i> Médicos Independientes</div>
+            <div class="client-badge"><i class="fas fa-heartbeat"></i> Consultorios de Cardiología</div>
+            <div class="client-badge"><i class="fas fa-hospital-symbol"></i> IPS y Centros Médicos</div>
+            <div class="client-badge"><i class="fas fa-user-md"></i> Consultorios Médicos Independientes</div>
             <div class="client-badge"><i class="fas fa-tooth"></i> Clínicas Odontológicas</div>
-            <div class="client-badge"><i class="fas fa-building"></i> Empresas del Sector Servicios</div>
-            <div class="client-badge"><i class="fas fa-stethoscopes"></i> Centros Médicos de Diagnóstico</div>
-            <div class="client-badge"><i class="fas fa-notes-medical"></i> Consultoría SG-SST PYMES</div>
+            <div class="client-badge"><i class="fas fa-microscope"></i> Laboratorios y Diagnóstico</div>
+            <div class="client-badge"><i class="fas fa-building"></i> Empresas del Sector Comercial y Servicios</div>
+            <div class="client-badge"><i class="fas fa-notes-medical"></i> Unidades de Especialidades Médicas</div>
         </div>
 
-        <!-- Segundo Grupo (Duplicado exacto para efecto infinito continuo) -->
+        <!-- Grupo 2 (Copia idéntica para mantener el movimiento fluido sin saltos) -->
         <div class="marquee-content" aria-hidden="true">
-            <div class="client-badge"><i class="fas fa-clinic-medical"></i> Consultorios de Cardiología</div>
-            <div class="client-badge"><i class="fas fa-hospital-user"></i> IPS Especializadas</div>
-            <div class="client-badge"><i class="fas fa-user-md"></i> Médicos Independientes</div>
+            <div class="client-badge"><i class="fas fa-heartbeat"></i> Consultorios de Cardiología</div>
+            <div class="client-badge"><i class="fas fa-hospital-symbol"></i> IPS y Centros Médicos</div>
+            <div class="client-badge"><i class="fas fa-user-md"></i> Consultorios Médicos Independientes</div>
             <div class="client-badge"><i class="fas fa-tooth"></i> Clínicas Odontológicas</div>
-            <div class="client-badge"><i class="fas fa-building"></i> Empresas del Sector Servicios</div>
-            <div class="client-badge"><i class="fas fa-stethoscopes"></i> Centros Médicos de Diagnóstico</div>
-            <div class="client-badge"><i class="fas fa-notes-medical"></i> Consultoría SG-SST PYMES</div>
+            <div class="client-badge"><i class="fas fa-microscope"></i> Laboratorios y Diagnóstico</div>
+            <div class="client-badge"><i class="fas fa-building"></i> Empresas del Sector Comercial y Servicios</div>
+            <div class="client-badge"><i class="fas fa-notes-medical"></i> Unidades de Especialidades Médicas</div>
         </div>
 
     </div>
+</section>
 </section>
     <!-- Contacto -->
     <section id="contacto" class="contact">
