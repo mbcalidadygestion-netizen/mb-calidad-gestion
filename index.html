@@ -204,6 +204,89 @@
             .hero h1 { font-size: 2.2rem; }
             .navbar-brand img { max-height: 40px; }
         }
+        /* Carrusel Continuo de Experiencia / Aliados */
+.experience-section {
+    padding: 60px 0;
+    background-color: var(--color-blanco);
+    overflow: hidden;
+}
+
+.marquee-container {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
+    position: relative;
+    padding: 20px 0;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 2rem;
+    animation: scroll-left 25s linear infinite;
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused; /* Se pausa cuando pasas el mouse por encima */
+}
+
+.client-badge {
+    background: var(--color-gris-claro);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--color-oscuro);
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease;
+}
+
+.client-badge i {
+    color: var(--color-cian);
+    font-size: 1.2rem;
+}
+
+.client-badge:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-cian);
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
     </style>
 </head>
 <body>
@@ -483,7 +566,40 @@
             </div>
         </div>
     </div>
+     <!-- Sección Experiencia y Trayectoria -->
+<section class="experience-section">
+    <div class="container text-center mb-4">
+        <h2 class="section-title text-center">Nuestra Experiencia</h2>
+        <p class="lead text-muted">Empresas, IPS y profesionales independientes que confían en nuestra gestión normativo-sanitaria y contable.</p>
+    </div>
 
+    <!-- Carrusel Infinito Desplazable -->
+    <div class="marquee-container">
+        
+        <!-- Primer Grupo -->
+        <div class="marquee-content">
+            <div class="client-badge"><i class="fas fa-clinic-medical"></i> Consultorios de Cardiología</div>
+            <div class="client-badge"><i class="fas fa-hospital-user"></i> IPS Especializadas</div>
+            <div class="client-badge"><i class="fas fa-user-md"></i> Médicos Independientes</div>
+            <div class="client-badge"><i class="fas fa-tooth"></i> Clínicas Odontológicas</div>
+            <div class="client-badge"><i class="fas fa-building"></i> Empresas del Sector Servicios</div>
+            <div class="client-badge"><i class="fas fa-stethoscopes"></i> Centros Médicos de Diagnóstico</div>
+            <div class="client-badge"><i class="fas fa-notes-medical"></i> Consultoría SG-SST PYMES</div>
+        </div>
+
+        <!-- Segundo Grupo (Duplicado exacto para efecto infinito continuo) -->
+        <div class="marquee-content" aria-hidden="true">
+            <div class="client-badge"><i class="fas fa-clinic-medical"></i> Consultorios de Cardiología</div>
+            <div class="client-badge"><i class="fas fa-hospital-user"></i> IPS Especializadas</div>
+            <div class="client-badge"><i class="fas fa-user-md"></i> Médicos Independientes</div>
+            <div class="client-badge"><i class="fas fa-tooth"></i> Clínicas Odontológicas</div>
+            <div class="client-badge"><i class="fas fa-building"></i> Empresas del Sector Servicios</div>
+            <div class="client-badge"><i class="fas fa-stethoscopes"></i> Centros Médicos de Diagnóstico</div>
+            <div class="client-badge"><i class="fas fa-notes-medical"></i> Consultoría SG-SST PYMES</div>
+        </div>
+
+    </div>
+</section>
     <!-- Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
