@@ -7,7 +7,7 @@
     <!-- SEO Básico -->
     <title>M&B Calidad y Gestión S.A.S. | Asesoría en Salud y SG-SST</title>
     <meta name="description" content="Empresa colombiana especializada en asesorías, auditorías y consultorías en calidad en salud, seguridad y salud en el trabajo (SG-SST) y gestión ambiental.">
-    <meta name="keywords" content="SG-SST, Calidad en Salud, PAMEC, Habilitación IPS, Habilitación Profesionales Independientes, Gestión Ambiental, Valledupar, Colombia">
+    <meta name="keywords" content="SG-SST, Calidad en Salud, PAMEC, Habilitación IPS, Habilitación Profesionales Independientes, RIPS JSON, Gestión Ambiental, Valledupar, Colombia">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mbcalidadygestion-netizen.github.io/mb-calidad-gestion/">
 
@@ -20,8 +20,8 @@
     <!-- Estilos Personalizados -->
     <style>
         :root {
-            --color-oscuro: #2a2a4e; /* Azul oscuro de las imágenes */
-            --color-cian: #10c4cc;   /* Turquesa de las imágenes */
+            --color-oscuro: #2a2a4e;
+            --color-cian: #10c4cc;
             --color-blanco: #ffffff;
             --color-gris-claro: #f8f9fa;
         }
@@ -29,6 +29,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--color-oscuro);
+            padding-top: 70px;
         }
 
         /* Navegación */
@@ -37,7 +38,8 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .navbar-brand img {
-            max-height: 50px; /* Ajusta según tu logo */
+            max-height: 50px;
+            width: auto;
         }
         .navbar-nav .nav-link {
             color: var(--color-blanco) !important;
@@ -47,7 +49,7 @@
             color: var(--color-cian) !important;
         }
 
-        /* Sección Hero (Inicio) */
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--color-oscuro) 0%, #3e3e70 100%);
             color: var(--color-blanco);
@@ -66,7 +68,7 @@
         }
         .btn-hero {
             background-color: var(--color-cian);
-            color: var(--color- oscu ro);
+            color: var(--color-oscuro);
             border: none;
             padding: 12px 30px;
             font-weight: 600;
@@ -79,7 +81,7 @@
             transform: translateY(-3px);
         }
 
-        /* Títulos de Sección */
+        /* Títulos */
         .section-title {
             color: var(--color-oscuro);
             font-weight: 700;
@@ -102,10 +104,11 @@
         /* Quiénes Somos */
         .whoweare {
             padding: 80px 0;
-            background-color: var(--color- gris- cl aro);
+            background-color: var(--color-gris-claro);
         }
         .whoweare-img {
             max-width: 100%;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
@@ -118,24 +121,27 @@
             background-color: var(--color-blanco);
             border: 1px solid rgba(0,0,0,0.05);
             border-radius: 10px;
-            padding: 40px;
+            padding: 30px;
             text-align: center;
             height: 100%;
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
             border-color: var(--color-cian);
         }
         .service-icon {
             font-size: 3rem;
             color: var(--color-cian);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 600;
             margin-bottom: 15px;
             color: var(--color-oscuro);
@@ -143,7 +149,7 @@
         .service-card p {
             color: #6c757d;
             font-size: 0.95rem;
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
 
         /* Contacto */
@@ -157,7 +163,7 @@
             margin-right: 10px;
         }
 
-        /* Footer (Pie de página) */
+        /* Footer */
         footer {
             background-color: var(--color-oscuro);
             color: rgba(255,255,255,0.7);
@@ -168,7 +174,7 @@
             color: var(--color-blanco);
         }
 
-        /* Botón WhatsApp Flotante */
+        /* WhatsApp */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -193,15 +199,10 @@
             color: var(--color-blanco);
             transform: scale(1.1);
         }
-        
-        /* Ajustes para Responsividad */
+
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .navbar-brand img {
-                max-height: 40px;
-            }
+            .hero h1 { font-size: 2.2rem; }
+            .navbar-brand img { max-height: 40px; }
         }
     </style>
 </head>
@@ -210,110 +211,129 @@
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <!-- Asegúrate de subir tu logo con el nombre logo.png -->
-                <img src="logo.png" alt="M&B Calidad y Gestión Logo">
+            <a class="navbar-brand" href="#inicio">
+                <img src="./logo.png" alt="M&B Calidad y Gestión Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-link"></li><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a></li>
-                    <li class="nav-link"></li><a class="nav-link" href="#nosotros">Nosotros</a></li>
-                    <li class="nav-link"></li><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-link"></li><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Sección Hero (Inicio) -->
+    <!-- Inicio -->
     <header id="inicio" class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h1>M&B Calidad y Gestión S.A.S.</h1>
-                    <p>Soluciones integrales en asesorías, auditorías y consultorías en el área de la calidad en salud, seguridad y salud en el trabajo y gestión ambiental en Colombia.</p>
+                    <p>Soluciones integrales en asesorías, auditorías y consultorías en calidad en salud, SG-SST y gestión ambiental en Colombia.</p>
                     <a href="#servicios" class="btn btn-hero btn-lg">Conoce Nuestros Servicios</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Sección Quiénes Somos -->
+    <!-- Quiénes Somos -->
     <section id="nosotros" class="whoweare">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="quienes-somos.jpg" alt="M&B Calidad y Gestión - Quiénes Somos" class="whoweare-img"> <!-- Puedes subir una imagen con este nombre o usar la de image_16.png si consigues el original -->
+                    <img src="./quienes-somos.jpg" alt="M&B Calidad y Gestión" class="whoweare-img" onerror="this.src='https://via.placeholder.com/600x400?text=MB+Calidad+y+Gestion'">
                 </div>
                 <div class="col-md-6">
                     <h2 class="section-title text-start mb-4">¿Quiénes Somos?</h2>
-                    <p class="lead text-muted">Somos una empresa colombiana dedicada a prestar los servicios profesionales en asesorías, auditorías y consultorías con un grupo interdisciplinario especializado.</p>
-                    <p>Nuestro compromiso es ofrecer los mejores estándares de calidad y servicio a nuestros clientes, garantizando el cumplimiento normativo y la mejora continua en sus procesos.</p>
+                    <p class="lead text-muted">Somos una empresa colombiana dedicada a prestar servicios profesionales de asesoría, auditoría y consultoría con un equipo interdisciplinario especializado.</p>
+                    <p>Nuestro compromiso es ofrecer los mejores estándares de calidad y servicio, garantizando el cumplimiento normativo ante entes reguladores (Secretaría de Salud, Ministerio de Trabajo, DIAN) y orientando a las organizaciones hacia la mejora continua.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección Servicios -->
+    <!-- Servicios -->
     <section id="servicios" class="services">
         <div class="container">
             <h2 class="section-title text-center">Nuestros Servicios Especializados</h2>
+            <p class="text-center text-muted mb-5">Haz clic en cada servicio para desplegar el detalle completo del acompañamiento.</p>
+            
             <div class="row g-4">
                 
-                <!-- Servicio 1: SG-SST (Basado en el contexto y image_16.png) -->
+                <!-- Servicio 1: SG-SST -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-hard-hat service-icon"></i>
-                        <h3>SG-SST</h3>
-                        <p>Diseño, implementación y auditoría del Sistema de Gestión de Seguridad y Salud en el Trabajo.</p>
+                        <div>
+                            <i class="fas fa-hard-hat service-icon"></i>
+                            <h3>SG-SST</h3>
+                            <p>Diseño, implementación y auditoría del Sistema de Gestión de Seguridad y Salud en el Trabajo (Res. 0312/2019).</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalSGSST">Ver Detalles</button>
                     </div>
                 </div>
 
-                <!-- Servicio 2: Habilitación IPS (Basado en image_14.png) -->
+                <!-- Servicio 2: Habilitación IPS -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-hospital service-icon"></i>
-                        <h3>Habilitación de IPS</h3>
-                        <p>Asesoría para la habilitación de IPS de baja, mediana y alta complejidad ante secretaría de salud departamental y ministerio de salud.</p>
+                        <div>
+                            <i class="fas fa-hospital service-icon"></i>
+                            <h3>Habilitación de IPS</h3>
+                            <p>Asesoría para la habilitación de IPS de baja, mediana y alta complejidad (Res. 3100/2019).</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalIPS">Ver Detalles</button>
                     </div>
                 </div>
 
-                <!-- Servicio 3: Habilitación Prof. Indep. (Basado en image_13.png) -->
+                <!-- Servicio 3: Habilitación Prof. Indep. -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-user-md service-icon"></i>
-                        <h3>Habilitación de Profesionales Independientes</h3>
-                        <p>Habilitación como profesional independiente en salud para cumplimiento de condiciones mínimas con la finalidad de garantizar la calidad en la atención.</p>
+                        <div>
+                            <i class="fas fa-user-md service-icon"></i>
+                            <h3>Profesionales Independientes</h3>
+                            <p>Habilitación y cumplimiento de condiciones mínimas de calidad para consultorios médicos e independientes.</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalProfIndep">Ver Detalles</button>
                     </div>
                 </div>
 
-                <!-- Servicio 4: PAMEC (Basado en image_14.png y image_15.png) -->
+                <!-- Servicio 4: RIPS JSON y Facturación -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-chart-line service-icon"></i>
-                        <h3>Programa PAMEC</h3>
-                        <p>Asesoría en el Programa de Auditoría para el Mejoramiento de la Calidad (PAMEC) para mantener y mejorar los resultados de los procesos intervenidos.</p>
+                        <div>
+                            <i class="fas fa-file-invoice-dollar service-icon"></i>
+                            <h3>RIPS & Facturación en Salud</h3>
+                            <p>Estructuración de RIPS JSON (Res. 2275), codificación CUPS/CIE-10 y facturación electrónica sector salud.</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalRIPS">Ver Detalles</button>
                     </div>
                 </div>
 
-                <!-- Servicio 5: Acreditación Salud (Basado en image_15.png) -->
+                <!-- Servicio 5: PAMEC y Acreditación -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-award service-icon"></i>
-                        <h3>Acreditación en Salud</h3>
-                        <p>Preparación y acompañamiento para la acreditación en salud ICONTEC.</p>
+                        <div>
+                            <i class="fas fa-award service-icon"></i>
+                            <h3>PAMEC & Acreditación</h3>
+                            <p>Programa de Auditoría para el Mejoramiento de la Calidad y preparación para acreditación ICONTEC.</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalPAMEC">Ver Detalles</button>
                     </div>
                 </div>
 
-                <!-- Servicio 6: Gestión Ambiental (Basado en image_16.png) -->
+                <!-- Servicio 6: Gestión Ambiental -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-leaf service-icon"></i>
-                        <h3>Gestión Ambiental</h3>
-                        <p>Asesoría y consultoría en gestión ambiental empresarial.</p>
+                        <div>
+                            <i class="fas fa-leaf service-icon"></i>
+                            <h3>Gestión Ambiental & PGIRASA</h3>
+                            <p>Planes de gestión integral de residuos hospitalarios, asesoría y consultoría ambiental empresarial.</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalAmbiental">Ver Detalles</button>
                     </div>
                 </div>
 
@@ -321,18 +341,161 @@
         </div>
     </section>
 
-    <!-- Sección Contacto -->
+    <!-- Modales Informativos de Servicios -->
+
+    <!-- Modal 1: SG-SST -->
+    <div class="modal fade" id="modalSGSST" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-hard-hat text-info me-2"></i> SG-SST</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Alcance de la Asesoría:</h6>
+                    <ul>
+                        <li>Diseño e implementación de Estándares Mínimos (Resolución 0312 de 2019).</li>
+                        <li>Matriz IPERC (Identificación de Peligros, Evaluación de Riesgos y Controles).</li>
+                        <li>Conformación y capacitación del COPASST y Comité de Convivencia Laboral.</li>
+                        <li>Plan de emergencias, mediciones y auditoría anual obligatoria.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/573104115325?text=Hola,%20solicito%20información%20sobre%20el%20SG-SST" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp me-1"></i> Cotizar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: IPS -->
+    <div class="modal fade" id="modalIPS" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-hospital text-info me-2"></i> Habilitación de IPS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Cumplimiento de los 7 Estándares (Resolución 3100 de 2019):</h6>
+                    <ul>
+                        <li>Talento Humano, Infraestructura y Dotación.</li>
+                        <li>Medicamentos, Dispositivos Médicos e Insumos.</li>
+                        <li>Procesos Prioritarios e Historia Clínica.</li>
+                        <li>Inscripción en el REPS y acompañamiento en visitas de la Secretaría de Salud.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/573104115325?text=Hola,%20solicito%20información%20sobre%20Habilitación%20de%20IPS" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp me-1"></i> Cotizar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Profesionales Independientes -->
+    <div class="modal fade" id="modalProfIndep" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-user-md text-info me-2"></i> Profesionales Independientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Habilitación para Médicos, Odontólogos y Especialistas:</h6>
+                    <ul>
+                        <li>Inscripción y apertura en la plataforma REPS.</li>
+                        <li>Elaboración del Portafolio de Servicios y Protocolos Prioritarios.</li>
+                        <li>Hoja de vida de equipos biomédicos y planes de mantenimiento.</li>
+                        <li>Manual de Bioseguridad y Gestión Documental para Consultorios.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/573104115325?text=Hola,%20solicito%20información%20sobre%20Habilitación%20de%20Profesionales%20Independientes" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp me-1"></i> Cotizar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: RIPS y Facturación -->
+    <div class="modal fade" id="modalRIPS" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-file-invoice-dollar text-info me-2"></i> RIPS JSON & Facturación Salud</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Soporte Administrativo y Tecnológico en Salud:</h6>
+                    <ul>
+                        <li>Generación y validación de RIPS en formato JSON bajo Resolución 2275.</li>
+                        <li>Mapeo y codificación de procedimientos CUPS y diagnósticos CIE-10.</li>
+                        <li>Integración de la Factura Electrónica de Venta (FEV) en Salud con validación DIAN/Minsalud.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/573104115325?text=Hola,%20solicito%20información%20sobre%20RIPS%20JSON%20y%20Facturación" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp me-1"></i> Cotizar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: PAMEC -->
+    <div class="modal fade" id="modalPAMEC" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-award text-info me-2"></i> PAMEC & Acreditación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Mejoramiento Continuo Institucional:</h6>
+                    <ul>
+                        <li>Implementación de la Ruta del PAMEC (Autoevaluación, Selección, Priorización y Aprendizaje).</li>
+                        <li>Medición de Indicadores de Calidad en Salud (Res. 256 de 2016).</li>
+                        <li>Preparación de estándares para Acreditación ICONTEC.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/573104115325?text=Hola,%20solicito%20información%20sobre%20PAMEC%20y%20Acreditación" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp me-1"></i> Cotizar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Gestión Ambiental -->
+    <div class="modal fade" id="modalAmbiental" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-leaf text-info me-2"></i> Gestión Ambiental & PGIRASA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Asesoría Ambiental Empresarial:</h6>
+                    <ul>
+                        <li>Diseño e implementación del Plan de Gestión Integral de Residuos Hospitalarios y Similares (PGIRASA).</li>
+                        <li>Gestión de Residuos Peligrosos (RESPEL) y licencias ante autoridades ambientales.</li>
+                        <li>Auditorías ambientales corporativas y capacitación al personal.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/573104115325?text=Hola,%20solicito%20información%20sobre%20Gestión%20Ambiental" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp me-1"></i> Cotizar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
             <h2 class="section-title text-center">Contáctanos</h2>
             <div class="row">
                 <div class="col-md-6 mx-auto text-center contact-info">
                     <p class="lead text-muted mb-4">Estamos listos para ayudarte a mejorar la calidad y gestión de tu organización.</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:mbcalidadygestion@mbcalidadygestion.com">mbcalidadygestion@mbcalidadygestion.com"</a></p> <!-- Reemplaza con tu correo -->
-                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+573104115325">+57 3104115325</a></p> <!-- Reemplaza con tu teléfono -->
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:mbcalidadygestion@mbcalidadygestion.com">mbcalidadygestion@mbcalidadygestion.com</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+573104115325">+57 310 411 5325</a></p>
                     <p><i class="fas fa-map-marker-alt"></i> Valledupar, Cesar - Colombia</p>
                     <p class="mt-4">
-                        <a href="#" class="btn btn-hero btn-lg">Solicitar una Cotización</a>
+                        <a href="https://wa.me/573104115325?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización" class="btn btn-hero btn-lg" target="_blank">Solicitar una Cotización</a>
                     </p>
                 </div>
             </div>
@@ -342,28 +505,27 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>&copy; 2023 <strong>M&B Calidad y Gestión S.A.S.</strong> Todos los derechos reservados.</p>
-            <p>Diseño web profesional</p>
+            <p>&copy; 2026 <strong>M&B Calidad y Gestión S.A.S.</strong> Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <!-- Botón WhatsApp Flotante -->
-    <!-- Reemplaza el número 573000000000 con tu número real de WhatsApp -->
     <a href="https://wa.me/573104115325?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20M&B%20Calidad%20y%20Gestión." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Bootstrap 5 JS Bundle con Popper -->
+    <!-- JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Script para scroll suave -->
     <script>
+        // Scroll suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
