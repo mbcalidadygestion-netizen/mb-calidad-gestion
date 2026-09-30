@@ -299,6 +299,12 @@
             .hero h1 { font-size: 2.2rem; }
             .navbar-brand img { max-height: 40px; }
         }
+        /* Estilos para el carrusel de imágenes dentro de los modales */
+        .modal-carousel-img {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -553,15 +559,43 @@
         </div>
     </section>
 
-    <!-- Modales de Servicios -->
+<!-- Modales de Servicios con Carruseles de Imágenes Deslizables -->
+
+    <!-- Modal 1: SG-SST -->
     <div class="modal fade" id="modalSGSST" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title font-weight-bold"><i class="fas fa-hard-hat text-info me-2"></i> SG-SST</h5>
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-hard-hat text-info me-2"></i> SG-SST - Sistema de Gestión</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Carrusel Deslizable 1 -->
+                    <div id="carouselSGSST" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselSGSST" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselSGSST" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselSGSST" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner shadow-sm rounded">
+                            <div class="carousel-item active">
+                                <img src="sgsst-1.jpg" class="d-block w-100 modal-carousel-img" alt="Inspecciones SG-SST" onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="sgsst-2.jpg" class="d-block w-100 modal-carousel-img" alt="Capacitaciones COPASST" onerror="this.src='https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="sgsst-3.jpg" class="d-block w-100 modal-carousel-img" alt="Auditorías Laborales" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSGSST" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSGSST" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
                     <h6>Alcance del Servicio:</h6>
                     <ul>
                         <li>Diseño e implementación de Estándares Mínimos (Resolución 0312 de 2019).</li>
@@ -577,14 +611,41 @@
         </div>
     </div>
 
+    <!-- Modal 2: IPS -->
     <div class="modal fade" id="modalIPS" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title font-weight-bold"><i class="fas fa-hospital text-info me-2"></i> Habilitación de IPS</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Carrusel Deslizable 2 -->
+                    <div id="carouselIPS" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselIPS" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselIPS" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselIPS" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner shadow-sm rounded">
+                            <div class="carousel-item active">
+                                <img src="ips-1.jpg" class="d-block w-100 modal-carousel-img" alt="Habilitación de Instalaciones Salud" onerror="this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="ips-2.jpg" class="d-block w-100 modal-carousel-img" alt="Equipos e Infraestructura" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="ips-3.jpg" class="d-block w-100 modal-carousel-img" alt="Visita Secretaría de Salud" onerror="this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIPS" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselIPS" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
                     <h6>Cumplimiento de Estándares (Res. 3100 de 2019):</h6>
                     <ul>
                         <li>Talento Humano, Infraestructura y Dotación.</li>
@@ -600,14 +661,41 @@
         </div>
     </div>
 
+    <!-- Modal 3: Profesionales Independientes -->
     <div class="modal fade" id="modalProfIndep" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title font-weight-bold"><i class="fas fa-user-md text-info me-2"></i> Profesionales Independientes</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Carrusel Deslizable 3 -->
+                    <div id="carouselProf" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselProf" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselProf" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselProf" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner shadow-sm rounded">
+                            <div class="carousel-item active">
+                                <img src="prof-1.jpg" class="d-block w-100 modal-carousel-img" alt="Consultorios Médicos" onerror="this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="prof-2.jpg" class="d-block w-100 modal-carousel-img" alt="Especialidades Especializadas" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="prof-3.jpg" class="d-block w-100 modal-carousel-img" alt="Documentación REPS" onerror="this.src='https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProf" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProf" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
                     <h6>Acompañamiento a Consultorios Privados:</h6>
                     <ul>
                         <li>Inscripción y habilitación en el registro REPS.</li>
@@ -622,14 +710,41 @@
         </div>
     </div>
 
+    <!-- Modal 4: PAMEC -->
     <div class="modal fade" id="modalPAMEC" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title font-weight-bold"><i class="fas fa-chart-line text-info me-2"></i> Programa PAMEC</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Carrusel Deslizable 4 -->
+                    <div id="carouselPAMEC" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselPAMEC" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselPAMEC" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselPAMEC" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner shadow-sm rounded">
+                            <div class="carousel-item active">
+                                <img src="pamec-1.jpg" class="d-block w-100 modal-carousel-img" alt="Ruta PAMEC" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pamec-2.jpg" class="d-block w-100 modal-carousel-img" alt="Indicadores de Calidad" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="pamec-3.jpg" class="d-block w-100 modal-carousel-img" alt="Mejora Continua" onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPAMEC" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPAMEC" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
                     <h6>Auditoría para la Calidad:</h6>
                     <ul>
                         <li>Ruta del PAMEC: Autoevaluación, Selección, Priorización y Aprendizaje.</li>
@@ -643,14 +758,41 @@
         </div>
     </div>
 
+    <!-- Modal 5: Acreditación -->
     <div class="modal fade" id="modalAcreditacion" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title font-weight-bold"><i class="fas fa-award text-info me-2"></i> Acreditación en Salud</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Carrusel Deslizable 5 -->
+                    <div id="carouselAcre" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselAcre" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselAcre" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselAcre" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner shadow-sm rounded">
+                            <div class="carousel-item active">
+                                <img src="acreditacion-1.jpg" class="d-block w-100 modal-carousel-img" alt="Acreditación ICONTEC" onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="acreditacion-2.jpg" class="d-block w-100 modal-carousel-img" alt="Estándares Superiores" onerror="this.src='https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="acreditacion-3.jpg" class="d-block w-100 modal-carousel-img" alt="Excelencia Médica" onerror="this.src='https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAcre" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAcre" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
                     <h6>Acompañamiento ICONTEC:</h6>
                     <ul>
                         <li>Preparación para el Sistema Único de Acreditación.</li>
@@ -664,14 +806,41 @@
         </div>
     </div>
 
+    <!-- Modal 6: Gestión Ambiental -->
     <div class="modal fade" id="modalAmbiental" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title font-weight-bold"><i class="fas fa-leaf text-info me-2"></i> Gestión Ambiental</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- Carrusel Deslizable 6 -->
+                    <div id="carouselAmb" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselAmb" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselAmb" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselAmb" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner shadow-sm rounded">
+                            <div class="carousel-item active">
+                                <img src="ambiental-1.jpg" class="d-block w-100 modal-carousel-img" alt="Gestión PGIRASA" onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="ambiental-2.jpg" class="d-block w-100 modal-carousel-img" alt="Residuos Peligrosos RESPEL" onerror="this.src='https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="ambiental-3.jpg" class="d-block w-100 modal-carousel-img" alt="Consultoría Ecológica" onerror="this.src='https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&auto=format&fit=crop&q=60'">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmb" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAmb" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
                     <h6>Consultoría Ambiental:</h6>
                     <ul>
                         <li>Diseño e implementación del PGIRASA (Plan de Residuos Hospitalarios).</li>
